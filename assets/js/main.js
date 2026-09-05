@@ -1,12 +1,13 @@
 // Mobile Navigation Toggle
 document.addEventListener('DOMContentLoaded', function() {
     const navMenu = document.querySelector('.nav-menu');
-    const logo = document.querySelector('.logo');
+    const menuToggle = document.querySelector('.menu-toggle');
 
-    // Füge Mobile Menu Toggle hinzu
-    if (window.innerWidth <= 768) {
-        logo.addEventListener('click', function() {
+    // Hamburger Menu Toggle
+    if (menuToggle) {
+        menuToggle.addEventListener('click', function() {
             navMenu.classList.toggle('active');
+            menuToggle.classList.toggle('active');
         });
     }
 
@@ -27,7 +28,11 @@ document.addEventListener('DOMContentLoaded', function() {
 // Resize Handler
 window.addEventListener('resize', function() {
     const navMenu = document.querySelector('.nav-menu');
+    const menuToggle = document.querySelector('.menu-toggle');
     if (window.innerWidth > 768) {
         navMenu.classList.remove('active');
+        if (menuToggle) {
+            menuToggle.classList.remove('active');
+        }
     }
 });
