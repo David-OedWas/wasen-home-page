@@ -390,12 +390,14 @@ footer a:hover {
 .price-box ul {
     list-style: none;
     padding-left: 0;
+    margin-left: 0;
 }
 
 .price-box ul li {
     padding: 0.5rem 0;
     padding-left: 1.5rem;
     position: relative;
+    margin-left: 0;
 }
 
 .price-box ul li::before {
@@ -429,4 +431,15 @@ footer a:hover {
     flex: 1;
     min-width: 200px;
     text-align: center;
+}
+
+/* Info Note */
+.info-note {
+    background-color: #e8f4f8;
+    border-left: 4px solid var(--primary-light-blue);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+    color: var(--text-dark);
+    font-style: italic;
 }
